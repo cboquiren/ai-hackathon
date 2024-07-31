@@ -1,0 +1,67 @@
+/* Navbar Stylings */
+#navbar {
+  position: fixed;
+  left: 20%;
+  right: 20%;
+}
+
+#navbar .container,
+#navbar .container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+}
+
+#navbar .container {
+  background-color: rgba(65, 105, 225, 0.8);
+  border-radius: 50px;
+  margin-top: 1rem;
+}
+
+#navbar .container img {
+  padding-left: 0.2rem;
+  cursor: pointer;
+}
+
+#navbar .container ul {
+  width: 50%;
+  font-size: 1.1rem;
+}
+
+#navbar .container ul li {
+  border-radius: 50px;
+  padding: 0.5rem 1.25rem;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  font-weight: 500;
+  color: rgb(255, 255, 240);
+}
+
+#navbar .container ul li:hover {
+  background-color: rgb(135, 206, 250);
+  scale: 1.1;
+}
+
+#navbar .container h3 {
+  margin-right: 2rem;
+  border-radius: 50px;
+  background-color: rgba(50, 205, 50, 0.8);
+  padding: 0.5rem 1.25rem;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+#navbar .container h3:hover {
+  scale: 1.2;
+}
+
+/* Homepage Stylings */
+#homepage .hero-container {
+  height: 40rem;
+  background-image: url("/src/assets/francesca-tosolini-tHkJAMcO3QE-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 10rem;
+}
