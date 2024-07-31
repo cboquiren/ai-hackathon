@@ -8,7 +8,7 @@ export const Homepage = () => {
       <section id="homepage">
         <div className="hero-container">
           <div className="container">
-            <h1>Discover the Perfect Place to Call Home</h1>
+            <h1>Find Your Dream Home Today</h1>
             <form action="post">
               <input
                 type="text"
