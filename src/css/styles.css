@@ -3,6 +3,7 @@
   position: fixed;
   left: 15%;
   right: 15%;
+  z-index: 100;
 }
 
 #navbar .container,
@@ -64,6 +65,7 @@
   background-size: cover;
   background-position: center;
   padding-top: 10rem;
+  position: relative;
 }
 
 #homepage .hero-container .container {
@@ -76,5 +78,107 @@
   font-size: 3rem;
   color: white;
   line-height: 2;
-  text-shadow: -7px 7px 15px rgb(47, 79, 79);
+  text-shadow: -7px 7px 20px rgb(47, 79, 79);
+}
+
+.hero-container .container .location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .location-container form {
+  padding: 0.5rem;
+  background-color: white;
+  width: 40%;
+  border-radius: 25px;
+}
+
+.container .location-container form:focus-within {
+  border: 3px solid rgb(135, 206, 250);
+  box-shadow: 1px -2px 5px rgb(135, 206, 250);
+}
+
+.location-container form input {
+  width: 90%;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  color: rgb(47, 79, 79);
+}
+
+.location-container form button {
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#homepage .transition {
+  position: absolute;
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(255, 255, 255) 100%);
+  height: 5rem;
+  width: 100%;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+}
+
+/* Options Stylings */
+#options .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#options .container .option-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 25%;
+  margin: 2rem 1rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(65, 105, 225, 0.3);
+  transition: all ease-in-out 0.2s;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+#options .container .option-button:hover {
+  scale: 1.1;
+}
+
+.container .option-button .icon-container {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.container .option-button h3 {
+  font-size: 1.5rem;
+  color: rgba(65, 105, 225, 0.8);
+  font-weight: 800;
+  margin: 0.5rem 0;
+}
+
+.container .option-button > p {
+  color: rgb(47, 79, 79);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.container .option-button .button {
+  background-color: rgba(50, 205, 50, 0.8);
+  color: rgb(255, 255, 240);
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
