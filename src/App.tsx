@@ -4,7 +4,9 @@
 // import { StringOutputParser } from "@langchain/core/output_parsers";
 import { Navbar } from "./components/navbar";
 import { Route, Routes } from "react-router";
-import { Homepage } from "./pages/homepage";
+import { Homepage } from "./pages/home";
+import { ListingsProvider } from "./providers/listingsProvider";
+import { ListingsPage } from "./pages/listings";
 
 function App() {
   // const [message, setMessage] = useState<string | null>(null);
@@ -26,10 +28,13 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
-      <Routes>
-        <Route path="/" element={<Homepage />}></Route>
-      </Routes>
+      <ListingsProvider>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Homepage />}></Route>
+          <Route path="/listings" element={<ListingsPage />}></Route>
+        </Routes>
+      </ListingsProvider>
     </>
   );
 }

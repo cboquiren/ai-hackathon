@@ -1,6 +1,7 @@
-import { Dispatch, ReactNode, SetStateAction, useContext } from "react";
+import { Dispatch, ReactNode, SetStateAction, useContext, useEffect, useState } from "react";
 import { TListing } from "../assets/types";
 import { createContext } from "react";
+import { listingsRequests } from "../requests/listingsRequests";
 
 type TListingsContext = {
   allListings: TListing[];
@@ -10,7 +11,23 @@ type TListingsContext = {
 const ListingContext = createContext<TListingsContext | undefined>(undefined);
 
 export const ListingsProvider = ({ children }: { children: ReactNode }) => {
-  return <ListingContext.Provider value={undefined}>{children}</ListingContext.Provider>;
+  const [allListings, setAllListings] = useState<TListing[]>([]);
+
+  const requestListings = () => {
+    return listingsRequests.requestListings().then(setAllListings);
+  };
+
+  useEffect(() => {
+    requestListings();
+  }, []);
+
+  console.log(allListings[0]);
+
+  return (
+    <ListingContext.Provider value={{ allListings, setAllListings }}>
+      {children}
+    </ListingContext.Provider>
+  );
 };
 
 export const useListings = () => {

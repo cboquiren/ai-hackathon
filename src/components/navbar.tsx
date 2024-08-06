@@ -1,12 +1,33 @@
+import { useNavigate } from "react-router";
+
 export const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section id="navbar">
         <div className="container">
-          <img src="https://img.logoipsum.com/254.svg" alt="Logo Holder" />
+          <img
+            src="https://img.logoipsum.com/254.svg"
+            alt="Logo Holder"
+            onClick={() => {
+              navigate("/");
+            }}
+          />
           <ul>
-            <li>Buy</li>
-            <li>Rent</li>
+            <li
+              onClick={() => {
+                navigate("/listings");
+              }}
+            >
+              Buy
+            </li>
+            <li
+              onClick={() => {
+                navigate("/listings");
+              }}
+            >
+              Rent
+            </li>
             <li>Sell</li>
             <li>Mortgage</li>
             <li>Find an Agent</li>

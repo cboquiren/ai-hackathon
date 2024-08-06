@@ -1,6 +1,6 @@
 export type TListing = {
   id: number;
-  address: string;
+  streetAddress: string;
   price: number;
   bedrooms: number;
   bathrooms: number;
